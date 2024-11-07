@@ -16,7 +16,7 @@ class Config:
 
 
 app = Flask(__name__)
-app.config.frpm_object(Config)
+app.config.from_object(Config)
 app.url_map.strict_slashes = False
 babel = Babel(app)
 
@@ -24,7 +24,7 @@ babel = Babel(app)
 @app.route("/")
 def index() -> str:
     """Return the content of the html page"""
-    return render_template("0-index.html")
+    return render_template("1-index.html")
 
 
 if __name__ == "__main__":
